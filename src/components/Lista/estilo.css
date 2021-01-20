@@ -1,0 +1,8 @@
+.ul {
+  margin-left: 20%;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}

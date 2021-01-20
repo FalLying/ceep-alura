@@ -1,0 +1,19 @@
+.card-nota {
+  border-radius: 10px;
+  color: #f8f8f2;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 10px 5px 5px #222;
+  border: 1px solid #444;
+}
+
+.card-titulo {
+  text-decoration: none;
+  margin: 10px;
+  padding-bottom: 5px;
+}
+
+.card-desc {
+  margin: 10px;
+  font-size: 14px;
+}

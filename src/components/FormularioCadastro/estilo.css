@@ -1,0 +1,45 @@
+.formCadastro {
+  height: 100%; /* 100% Full-height */
+  border: 1px solid #444;
+  width: 20%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.formInput,
+.formTextArea {
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  display: block;
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.formInput {
+  height: 25px;
+}
+
+.formLabel {
+  margin-left: 10px;
+  color: #f8f8f2;
+  font-size: 14px;
+}
+
+.formButton {
+  margin-left: 10px;
+  background-color: #ff79c6;
+  color: #f8f8f2;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.formButton:hover {
+  cursor: pointer;
+}
