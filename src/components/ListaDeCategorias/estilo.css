@@ -1,0 +1,19 @@
+.sectionCategorias ul {
+  margin-left: 20%;
+  margin-top: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+}
+
+.sectionCategorias li {
+  background-color: #a3f9a0;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.sectionCategorias li,
+input {
+  margin: 0 2rem;
+  flex: 1;
+}
