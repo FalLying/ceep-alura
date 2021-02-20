@@ -6,6 +6,18 @@ class FormularioCadastro extends Component {
     super(props);
     this.titulo = "";
     this.desc = "";
+    this.categoria = "Sem categoria";
+    this.state = { categorias: [] };
+    this._novasCategorias = this._novasCategorias.bind(this);
+  }
+  componentDidMount() {
+    this.props.categorias.inscrever(this._novasCategorias);
+  }
+  componentWillUnmount() {
+    this.props.categorias.desinscrever(this._novasCategorias);
+  }
+  _novasCategorias(categorias) {
+    this.setState({ ...this.state, categorias });
   }
   handleMudaTitulo(e) {
     this.titulo = e.target.value;
@@ -13,13 +25,29 @@ class FormularioCadastro extends Component {
   handleMudaDesc(e) {
     this.desc = e.target.value;
   }
+  handleMudancaCategoria(e) {
+    e.stopPropagation();
+    this.categoria = e.target.value;
+  }
   criarNota(e) {
     e.preventDefault();
-    this.props.criarNota(this.titulo, this.desc);
+    this.props.criarNota(this.titulo, this.desc, this.categoria);
   }
   render() {
     return (
       <form onSubmit={this.criarNota.bind(this)} className="formCadastro">
+        <label className="formLabel" htmlFor="inputTitulo">
+          Categoria
+        </label>
+        <select
+          onChange={this.handleMudancaCategoria.bind(this)}
+          className="formInput"
+        >
+          <option>Sem Categoria</option>
+          {this.state.categorias.map((categoria, index) => (
+            <option key={index}>{categoria}</option>
+          ))}
+        </select>
         <label className="formLabel" htmlFor="inputTitulo">
           Título
         </label>
